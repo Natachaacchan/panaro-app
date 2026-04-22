@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2023",
+    "useDefineForClassFields": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": [
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/index.css",
+    "src/app/components/Layout.tsx",
+    "src/app/context/**/*.ts",
+    "src/app/context/**/*.tsx",
+    "src/app/data/**/*.ts",
+    "src/app/hooks/**/*.ts",
+    "src/app/pages/Calendar.tsx",
+    "src/app/pages/Dashboard.tsx",
+    "src/app/pages/Login.tsx",
+    "src/app/pages/Notes.tsx",
+    "src/app/pages/Projects.tsx",
+    "src/app/pages/Tasks.tsx",
+    "src/app/pages/VisualEditor.tsx",
+    "src/app/routes.tsx",
+    "src/app/services/supabaseClient.ts",
+    "src/app/types/**/*.ts"
+  ],
+  "exclude": [
+    "src/app/App.tsx",
+    "src/app/routes.ts",
+    "src/app/pages/LandingCalendar.tsx",
+    "src/app/components/AIInsightCard.tsx",
+    "src/app/components/OrganizeDayModal.tsx",
+    "src/app/components/ProcrastinationAlert.tsx",
+    "src/app/components/ui/**/*",
+    "src/app/services/aiEngine.ts"
+  ]
+}

@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  /* Colors - Dark Cosmic Theme */
+  --color-dark-bg: #0f0b1a;
+  --color-dark-secondary: #1a1625;
+  --color-dark-card: #252034;
+  --color-purple-neon: #a855f7;
+  --color-purple-glow: #c084fc;
+  --color-pink-neon: #ec4899;
+  
+  /* Glassmorphism */
+  --color-glass: rgba(37, 32, 52, 0.6);
+  --color-glass-border: rgba(168, 85, 247, 0.2);
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f0b1a;
+  color: #e2e8f0;
+}
+
+/* Glow effects */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+.glass-card {
+  background: rgba(37, 32, 52, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Starfield background */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.star {
+  animation: twinkle 3s infinite;
+}
