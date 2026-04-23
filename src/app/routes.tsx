@@ -29,7 +29,4 @@ export const router = createHashRouter(
       errorElement: <RouteErrorBoundary />,
     },
   ],
-  {
-    basename: import.meta.env.BASE_URL,
-  },
 );
