@@ -71,4 +71,28 @@ npm run build
 ## Guia de publicacao para teste
 
 Use o passo a passo completo em [supabase/SETUP.md](C:/Users/Natacha/OneDrive/Documentos/Projetos/Panaro/panaro-app/supabase/SETUP.md).
+
+## Publicacao no GitHub Pages
+
+O projeto ja esta configurado para publicar em:
+
+`https://natachaacchan.github.io/panaro-app/`
+
+O que foi alinhado:
+
+- `vite.config.ts` usa `base: "/panaro-app/"` em producao
+- o router usa `createHashRouter`, que funciona bem no GitHub Pages
+- existe um workflow em [.github/workflows/deploy-github-pages.yml](C:/Users/Natacha/OneDrive/Documentos/Projetos/Panaro/panaro-app/.github/workflows/deploy-github-pages.yml)
+
+Para ativar:
+
+1. Suba o codigo para a branch `main`.
+2. No GitHub, abra `Settings > Pages`.
+3. Em `Source`, selecione `GitHub Actions`.
+4. Em `Settings > Secrets and variables > Actions`, crie:
+   `VITE_SUPABASE_URL`
+   `VITE_SUPABASE_ANON_KEY`
+5. Rode o workflow ou faça um novo push na `main`.
+
+Depois disso, o link publicado passa a usar o build correto do Pages.
   
